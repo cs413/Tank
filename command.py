@@ -6,6 +6,7 @@ del over = True
 def main()
 	n = raw_input("Enter Command:")
 	while n.strip() != 'exit':
+		command(n)
 		n = raw_input("Enter Command:")
 
 def command(c):
