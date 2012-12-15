@@ -9,28 +9,28 @@ while n.strip() != 'exit':
 
 
 def command(c):
-	if c=='w':
+	if c=='w' or c=='8':
 		t.forward()
 		return 'Forward'
-	elif c=='s':
+	elif c=='s' or c=='5':
 		t.stop()
 		return 'Stop'
-	elif c=='x'
+	elif c=='x' or c=='2':
 		t.reverse()
 		return 'Reverse'
-	elif c=='a'
+	elif c=='a' or c=='4':
 		t.tLeft()
 		return 'Turn Left'
-	elif c=='d'
+	elif c=='d' or c=='6':
 		t.tRight()
 		return 'Turn Right'
-	elif c=='q'
+	elif c=='q' or c=='7':
 		t.sLeft()
 		return 'Spin Left'
-	elif c=='e'
+	elif c=='e' or c=='9':
 		t.sRIght()
 		return 'Spin Right'
-	elif c='#'
+	elif c='#':
 		if(over)
 			over=False
 			t.overoff()
