@@ -3,10 +3,10 @@ t.overon() #Enable overide to prevent movement
 
 del over = True
 
-n = raw_input("Enter Command:")
-while n.strip() != 'exit':
-    n = raw_input("Enter Command:")
-
+def main()
+	n = raw_input("Enter Command:")
+	while n.strip() != 'exit':
+		n = raw_input("Enter Command:")
 
 def command(c):
 	if c=='w' or c=='8':
