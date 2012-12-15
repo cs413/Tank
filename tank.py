@@ -1,3 +1,8 @@
+########################################
+# CS413 - Tank Project - 2012/2013     #
+# GROUP 2 - Colin , Iain, Mathew, Gary #
+########################################
+
 import piface.pfio as pfio # Import the piface emulators to allow running of the tank
 pfio.init()
 
