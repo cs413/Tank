@@ -1,4 +1,4 @@
-import piface.pfio as pfio
+import piface.pfio as pfio # Import the piface emulators to allow running of the tank
 pfio.init()
 
 pfio.digital_write(5,1) # Both Tracks Disabled
