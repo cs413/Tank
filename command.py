@@ -10,43 +10,9 @@ from ftplib import ftp #Import ftp to allow uploading of ip address
 t.overon() #Enable overide to prevent movement
 
 over = True
-
-def main():
-	a = 'n'
-	if a.strip().lower() == 'y':
-		remoteConnection()
-	else
-		terminal()
-	
-def remoteConnection():
-	s = socket.socket()
-	host = socket.gethostname()
-	port = 40000
-	ftpIp(host)
-	s.bind((host,port))
-	s.listen(5)
-	while True:
-		c, addr = s.accept()
-		while n.strip !='exit':
-			command(n.strip())
-			n = s.recv(1024)
-		s.close()
-
-def ftpIp(host):
-	file = '192.168.2.1' #host New IP
-	ftp.connect('stream.2x1.co.uk') # Connet to Host
-	ftp.login('u67918920-CS413','password123') # Login to Host
-	ftp.delete('connection.html') # Delete Old Connection File
-	ftp.storlines('STOR connection.html', file) # Upload new Connection File
-	ftp.quit()
-	
-def terminal():
-	n = raw_input("Enter Command:")
-	while n.strip() != 'exit':
-		command(n.strip())
-		n = raw_input("Enter Command:")
 		
 def command(c):
+	global over
 	if c=='w' or c=='8':
 		t.forward()
 		return 'Forward'
@@ -66,9 +32,9 @@ def command(c):
 		t.sLeft()
 		return 'Spin Left'
 	elif c=='e' or c=='9':
-		t.sRIght()
+		t.sRight()
 		return 'Spin Right'
-	elif c='#':
+	elif c='=':
 		if(over)
 			over=False
 			t.overoff()
@@ -76,5 +42,11 @@ def command(c):
 		else
 			over=True
 			t.overon()
-			return 'Overide On'		
+			return 'Overide On'
+
+def terminal():
+	c = raw_input("Enter Command:")
+	while c != 'exit':
+		command(c)
+		c = raw_input("Enter Command:")
 	
